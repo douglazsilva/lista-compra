@@ -20,4 +20,8 @@ export class ListaComponent implements OnInit {
   ngOnInit() {
   }
 
+  delete(item){
+    this.conexao.deleteItem(item);
+  }
+
 }
