@@ -9,6 +9,9 @@ import { ConexaoService } from 'src/app/servicos/conexao.service';
 export class ListaComponent implements OnInit {
 
   items:any;
+  updatedItem:any={
+    name: ''
+  }
 
   constructor(private conexao:ConexaoService) { 
     this.conexao.listaItem().subscribe(item=>{
@@ -24,4 +27,11 @@ export class ListaComponent implements OnInit {
     this.conexao.deleteItem(item);
   }
 
+  update(item){
+    this.updatedItem = item;
+  }
+
+  addUpdatedItem(){
+    this.conexao.updateItem(this.updatedItem);
+  }
 }

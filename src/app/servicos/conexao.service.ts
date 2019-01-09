@@ -36,6 +36,11 @@ export class ConexaoService {
 
   deleteItem(item){
     this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
-    this.itemDoc.delete();  
+    this.itemDoc.delete(); 
+  }
+
+  updateItem(item){
+    this.itemDoc = this.afs.doc<Item>(`items/${item.id}`);
+    this.itemDoc.update(item); 
   }
 }
