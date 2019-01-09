@@ -1,3 +1,5 @@
-<p>
-  lista-add works!
-</p>
+<form (ngSubmit)="add()">
+  <input type="text" placeholder="Nome do Produto" name="name" class="form-control"
+    [(ngModel)]="item.name">
+  <button class="btn btn-warning mt-3" type="submit">Adicionar</button>
+</form>

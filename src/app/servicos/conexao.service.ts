@@ -27,4 +27,8 @@ export class ConexaoService {
   listaItem(){
     return this.items;
   }
+
+  addItem(item: Item) {
+    this.itemsCollection.add(item);
+  }
 }
